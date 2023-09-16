@@ -1,9 +1,12 @@
 .container {
   height: 60px;
+  position: sticky;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  top: 0;
 }
 
 .span {
