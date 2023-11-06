@@ -1,9 +1,14 @@
 import style from "./Card.module.css";
 
-const Card = () => {
+const Card = ({ id, imagen, tipo, marca, descripcion, stock, precio }) => {
   return (
-    <div>
-      <h1>CARD</h1>
+    <div className={style.card}>
+      <img src={imagen}></img>
+      <h1>Marca: {marca}</h1>
+      <h2>Producto: {tipo}</h2>
+      <p>Descripción: {descripcion}</p>
+      <p>Unidades: {stock}</p>
+      <p>Precio: ${precio}</p>
     </div>
   );
 };
