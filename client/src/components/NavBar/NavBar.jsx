@@ -10,17 +10,8 @@ const NavBar = () => {
       <Link className={style.span} to="/productos">
         <span>Productos</span>
       </Link>
-      <Link className={style.span} to="/armado">
-        <span>Armado de PC</span>
-      </Link>
       <Link className={style.span} to="/about">
         <span>Contacto</span>
-      </Link>
-      <Link className={style.span} to="/login">
-        <span>Login</span>
-      </Link>
-      <Link className={style.span} to="/registro">
-        <span>Registro</span>
       </Link>
     </div>
   );

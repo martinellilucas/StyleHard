@@ -1,8 +1,7 @@
 import style from "./Cards.module.css";
 import Card from "../Card/Card.jsx";
-import { productos } from "./mock.js";
 
-const Cards = () => {
+const Cards = ({ productos }) => {
   return (
     <div className={style.cardsContainer}>
       {productos?.map(

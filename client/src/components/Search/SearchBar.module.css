@@ -1,0 +1,15 @@
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 50px;
+}
+.title {
+  font-size: 4em;
+}
+.input {
+  padding: 15px 15px;
+  width: 30%;
+  text-align: left;
+  border-radius: 5px;
+}

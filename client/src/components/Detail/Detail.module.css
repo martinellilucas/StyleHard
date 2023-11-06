@@ -1,0 +1,19 @@
+.separador {
+  border: 40px solid rgba(0, 0, 0, 0.9);
+}
+.body {
+  display: flex;
+  flex-direction: column;
+}
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  padding: 5px 50px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0px;
+  border-radius: 4px;
+}

@@ -1,0 +1,7 @@
+.separador {
+  border: 40px solid rgba(0, 0, 0, 0.9);
+}
+.body {
+  display: flex;
+  flex-direction: column;
+}
