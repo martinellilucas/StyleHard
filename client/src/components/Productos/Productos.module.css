@@ -19,11 +19,16 @@
   text-shadow: 1px 1px 1px orange;
 }
 .menu {
-  font-size: 1em;
+  font-size: 1.2em;
   background: white;
   border: 1px solid white;
   color: rgba(0, 0, 0, 0.5);
   padding: 2px;
   border-radius: 5px;
   box-shadow: 3px 3px 8px black;
+  width: 200px;
+}
+
+.menuOption {
+  width: 150px;
 }
