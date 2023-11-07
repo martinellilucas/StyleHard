@@ -12,12 +12,10 @@ const Pagination = ({
 
   const handleNext = () => {
     if (currentPage < pages.length) setCurrentPage(currentPage + 1);
-    else alert("No more pages found");
   };
 
   const handlePrevious = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
-    else alert("No more pages found");
   };
 
   const onSpecificPage = (n) => {
