@@ -5,7 +5,7 @@ const Card = ({ id, imagen, tipo, marca, descripcion, stock, precio }) => {
   return (
     <div className={style.card}>
       <Link to={`/detail/${id}`}>
-        <img className={style.img} src={imagen}></img>
+        <img alt={descripcion} className={style.img} src={imagen}></img>
       </Link>
       <h1 className={style.title}>Marca: {marca}</h1>
       <h2 className={style.title}>Producto: {tipo}</h2>

@@ -25,7 +25,7 @@ const SearchBar = ({ currentPage, setCurrentPage }) => {
         value={search}
         type="search"
       ></input>
-      <img src={logo} />
+      <img alt="logo" src={logo} />
     </div>
   );
 };

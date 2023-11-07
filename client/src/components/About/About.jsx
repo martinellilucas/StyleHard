@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { FaCheckSquare } from "react-icons/fa";
 import style from "./About.module.css";
 
 const About = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
   const sendEmail = (e) => {
     e.preventDefault();
     alert("Su mensaje ha sido enviado con éxito");

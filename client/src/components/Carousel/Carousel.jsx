@@ -8,7 +8,6 @@ import imagen7 from "../../assets/images/7.png";
 import imagen8 from "../../assets/images/8.png";
 import imagen9 from "../../assets/images/9.png";
 import imagen10 from "../../assets/images/10.png";
-import style from "./Carousel.module.css";
 import React from "react";
 import { MDBCarousel, MDBCarouselItem } from "mdb-react-ui-kit";
 

@@ -16,17 +16,17 @@ const Detail = () => {
       dispatch(cleanDetail());
     };
   }, [id, dispatch]);
-  console.log(productDetail.marca);
+
   return (
     <div className={style.body}>
       <h1 className={style.title}>
         StyleHard
-        <img src={logo} />
+        <img alt="logo" src={logo} />
       </h1>
       <hr className={style.separador} />
       {productDetail.tipo ? (
         <div className={style.detail}>
-          <img src={productDetail.imagen} />
+          <img alt={productDetail.descripcion} src={productDetail.imagen} />
           <div className={style.desc}>
             <h1>{productDetail.tipo}</h1>
             <hr />

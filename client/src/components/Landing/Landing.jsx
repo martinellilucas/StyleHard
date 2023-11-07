@@ -6,7 +6,7 @@ const Landing = () => {
   return (
     <div className={style.body}>
       <h1 className={style.title}>
-        StyleHard <img src={logo} />
+        StyleHard <img alt="logo" src={logo} />
       </h1>
       <Carousel />
     </div>
