@@ -3,7 +3,7 @@ import style from "./Detail.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addDetail, cleanDetail } from "../../redux/actions";
-import SearchBar from "../Search/SearchBar.jsx";
+import logo from "../../assets/images/logo.png";
 
 const Detail = () => {
   const { productDetail } = useSelector((state) => state);
