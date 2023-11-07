@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-image: url("client\src\assets\images\StyleHard.png");
+  background-image: url("../../assets/images/StyleHard.png");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Titillium Web", sans-serif;
