@@ -29,7 +29,7 @@ const Carousel = () => {
   return (
     <MDBCarousel showControls>
       {cards?.map((img) => {
-        return <MDBCarouselItem src={img} alt="..." />;
+        return <MDBCarouselItem className="w-100" src={img} alt="..." />;
       })}
     </MDBCarousel>
   );
