@@ -1,7 +1,26 @@
 .separador {
-  border: 40px solid rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .body {
   display: flex;
   flex-direction: column;
+}
+.filtrar {
+  font-size: 2em;
+  color: white;
+}
+.menu {
+  font-size: 1.3em;
+  background: white;
+  border: 1px solid white;
+  color: rgba(0, 0, 0, 0.5);
+  height: max-content;
+  padding: 2px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px black;
+  margin: 20px;
 }

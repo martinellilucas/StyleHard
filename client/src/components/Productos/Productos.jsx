@@ -3,7 +3,7 @@ import SearchBar from "../Search/SearchBar";
 import Cards from "../Cards/Cards";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { getProducts } from "../../redux/actions";
+import { getProducts, order, filter } from "../../redux/actions";
 import Pagination from "../Pagination/Pagination";
 
 const Productos = ({ currentPage, setCurrentPage }) => {
@@ -19,10 +19,66 @@ const Productos = ({ currentPage, setCurrentPage }) => {
     dispatch(getProducts());
   }, [dispatch]);
 
+  const handleOrder = (event) => {
+    const judgment = event.target.value;
+    dispatch(order(judgment));
+    setCurrentPage(1);
+  };
+  const handleFilter = (event) => {
+    const judgment = event.target.value;
+    dispatch(filter(judgment));
+    setCurrentPage(1);
+  };
   return (
     <div className={style.body}>
-      <SearchBar />
-      <hr className={style.separador} />
+      <SearchBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <div className={style.separador}>
+        <h1 className={style.filtrar}>Filtrar</h1>
+        <select className={style.menu} name="order" onChange={handleOrder}>
+          <option className={style.menuOption}>Por precio</option>
+          <option className={style.menuOption} value="ascendente">
+            ⬆
+          </option>
+          <option className={style.menuOption} value="descendente">
+            ⬇
+          </option>
+        </select>
+        <select className={style.menu} name="filter" onChange={handleFilter}>
+          <option className={style.menuOption} value="all">
+            Por tipo
+          </option>
+          <option className={style.menuOption} value="Monitor">
+            Monitor
+          </option>
+          <option className={style.menuOption} value="Procesador">
+            Procesador
+          </option>
+          <option className={style.menuOption} value="Mother">
+            Mother
+          </option>
+          <option className={style.menuOption} value="Gráfica">
+            Gráfica
+          </option>
+          <option className={style.menuOption} value="Memoria">
+            Memoria
+          </option>
+          <option className={style.menuOption} value="Gabinete">
+            Gabinete
+          </option>
+          <option className={style.menuOption} value="Fuente">
+            Fuente
+          </option>
+          <option className={style.menuOption} value="Auriculares">
+            Auriculares
+          </option>
+          <option className={style.menuOption} value="Teclado">
+            Teclado
+          </option>
+          <option className={style.menuOption} value="Mouse">
+            Mouse
+          </option>
+        </select>
+      </div>
       <Pagination
         productsPerPage={productsPerPage}
         currentPage={currentPage}

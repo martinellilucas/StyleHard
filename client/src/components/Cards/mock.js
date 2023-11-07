@@ -156,7 +156,7 @@ export const productos = [
     id: "16",
     imagen:
       "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_37306_Memoria_Corsair_DDR4_8GB_3200MHz_Vengeance_RGB_RS_2548a410-grn.jpg",
-    tipo: "Memorias",
+    tipo: "Memoria",
     marca: "Corsair",
     descripcion: "Memoria Corsair DDR4 8GB 3200MHz Vengeance RGB RS",
     stock: "5",
@@ -165,12 +165,13 @@ export const productos = [
   {
     id: "17",
     imagen:
-      "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_22302_Procesador_AMD_Ryzen_9_5950X_4.9GHz_Turbo_AM4_-_No_incluye_Cooler_9d34d3b3-grn.jpg",
-    tipo: "Procesador",
-    marca: " AMD",
-    descripcion: " Ryzen 9 5950X 4.9GHz Turbo AM4 - No incluye Cooler",
+      "https://imagenes.compragamer.com/productos/compragamer_Imganen_general_13362_Memoria_Corsair_DDR4_16GB__2x8GB__2666MHz_Vengeance_RGB_PRO_White__46617cf9-grn.jpg",
+    tipo: "Memoria",
+    marca: "Corsair",
+    descripcion:
+      "Memoria Corsair DDR4 16GB (2x8GB) 2666MHz Vengeance RGB PRO White",
     stock: "5",
-    precio: "615900",
+    precio: "58400",
   },
   {
     id: "18",
@@ -340,7 +341,7 @@ export const productos = [
     marca: "Logitech",
     descripcion: "Mouse Logitech G203 Lightsync RGB White",
     stock: "5",
-    precio: "18.600",
+    precio: "18600",
   },
   {
     id: "35",

@@ -1,4 +1,11 @@
-import { GET_PRODUCTS, ADD_DETAIL, CLEAN_DETAIL } from "./actions";
+import {
+  GET_PRODUCTS,
+  ADD_DETAIL,
+  CLEAN_DETAIL,
+  ORDER,
+  FILTER,
+  SEARCH,
+} from "./actions";
 
 const initialState = {
   products: [],
@@ -25,6 +32,38 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         productDetail: {},
+      };
+    case ORDER:
+      if (action.payload === "ascendente") {
+        return {
+          ...state,
+          products: [...state.products.sort((a, b) => a.precio - b.precio)],
+        };
+      }
+      if (action.payload === "descendente") {
+        return {
+          ...state,
+          products: [...state.products.sort((a, b) => b.precio - a.precio)],
+        };
+      }
+      return { ...state };
+    case FILTER:
+      if (action.payload === "all") {
+        return { ...state, products: [...state.allProducts] };
+      }
+      return {
+        ...state,
+        products: [
+          ...state.allProducts.filter(
+            (product) => product.tipo === action.payload
+          ),
+        ],
+      };
+    case SEARCH:
+      return {
+        ...state,
+        allProducts: [...state.products],
+        products: [...action.payload],
       };
     default:
       return { ...state };
