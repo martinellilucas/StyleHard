@@ -19,7 +19,10 @@ const Detail = () => {
   console.log(productDetail.marca);
   return (
     <div className={style.body}>
-      <SearchBar></SearchBar>
+      <h1 className={style.title}>
+        <img src={logo} />
+        StyleHard
+      </h1>
       <hr className={style.separador} />
       {productDetail.tipo ? (
         <div className={style.detail}>
