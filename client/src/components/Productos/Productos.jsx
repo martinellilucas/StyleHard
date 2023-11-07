@@ -33,7 +33,7 @@ const Productos = ({ currentPage, setCurrentPage }) => {
     <div className={style.body}>
       <SearchBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <div className={style.separador}>
-        <h1 className={style.filtrar}>Filtrar</h1>
+        <h1 className={style.filtrar}>FILTRAR</h1>
         <select className={style.menu} name="order" onChange={handleOrder}>
           <option className={style.menuOption}>Por precio</option>
           <option className={style.menuOption} value="ascendente">

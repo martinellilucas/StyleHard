@@ -4,6 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  background-image: url("C:\Users\Lucas\Desktop\StyleHard\client\src\assets\images\StyleHard.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Titillium Web", sans-serif;
 }
 .body {
   display: flex;
@@ -12,15 +16,14 @@
 .filtrar {
   font-size: 2em;
   color: white;
+  text-shadow: 1px 1px 1px orange;
 }
 .menu {
-  font-size: 1.3em;
+  font-size: 1em;
   background: white;
   border: 1px solid white;
   color: rgba(0, 0, 0, 0.5);
-  height: max-content;
   padding: 2px;
   border-radius: 5px;
   box-shadow: 3px 3px 8px black;
-  margin: 20px;
 }

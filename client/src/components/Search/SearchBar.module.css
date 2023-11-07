@@ -6,10 +6,13 @@
 }
 .title {
   font-size: 4em;
+  color: black;
+  font-family: "Titillium Web", sans-serif;
 }
 .input {
   padding: 15px 15px;
   width: 30%;
   text-align: left;
   border-radius: 5px;
+  font-family: "Titillium Web", sans-serif;
 }

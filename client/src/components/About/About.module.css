@@ -4,6 +4,10 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20rem;
   padding: 150px;
+  background-image: url("C:\Users\Lucas\Desktop\StyleHard\client\src\assets\images\StyleHard.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Titillium Web", sans-serif;
 }
 
 .form {
@@ -11,6 +15,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 200px;
 }
 
 .section {
@@ -31,20 +36,20 @@
 }
 .titleContainer {
   display: flex;
-  align-items: top;
+  align-items: center;
   justify-content: center;
 }
 .title {
-  color: rgba(0, 0, 0, 0.8);
+  color: white;
   font-size: 4em;
+  text-shadow: 1px 3px 3px orange;
 }
 .button {
   width: 100px;
   height: 45px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
+  background: orange;
+  border-radius: 5px;
   cursor: pointer;
-  box-shadow: 1px 1px 6px white;
   text-transform: uppercase;
   color: white;
   font-weight: bolder;
@@ -53,10 +58,10 @@
 }
 .line {
   content: "";
-
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  width: 1px;
+  background: orange;
+  width: 5px;
   height: 400px;
   left: 50%;
+  top: 30%;
 }

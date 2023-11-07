@@ -4,9 +4,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  background-image: url("C:\Users\Lucas\Desktop\StyleHard\client\src\assets\images\StyleHard.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Titillium Web", sans-serif;
 }
 
 .title {
-  font-size: 4em;
+  font-size: 5em;
   margin-bottom: 60px;
+  color: white;
+  text-shadow: 1px 3px 3px orange;
 }

@@ -1,5 +1,4 @@
 import style from "./SearchBar.module.css";
-import logo from "../../assets/images/logo.png";
 import { useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { searchProduct } from "../../redux/actions";
@@ -25,7 +24,6 @@ const SearchBar = ({ currentPage, setCurrentPage }) => {
         value={search}
         type="search"
       ></input>
-      <img alt="logo" src={logo} />
     </div>
   );
 };

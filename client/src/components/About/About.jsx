@@ -11,7 +11,7 @@ const About = () => {
       <form onSubmit={sendEmail} id="form" className={style.form}>
         <div className={style.section}>
           <label htmlFor="name" className={style.label}>
-            <FaCheckSquare color="grey" size={30} />{" "}
+            <FaCheckSquare color="orange" size={30} />{" "}
           </label>
           <input
             type="text"
@@ -23,7 +23,7 @@ const About = () => {
         </div>
         <div className={style.section}>
           <label htmlFor="email" className={style.label}>
-            <FaCheckSquare color="grey" size={30} />{" "}
+            <FaCheckSquare color="orange" size={30} />{" "}
           </label>
           <input
             type="text"
@@ -35,7 +35,7 @@ const About = () => {
         </div>
         <div className={style.section}>
           <label htmlFor="message" className={style.label}>
-            <FaCheckSquare color="grey" size={30} />{" "}
+            <FaCheckSquare color="orange" size={30} />{" "}
           </label>
           <input
             name="message"
@@ -50,7 +50,7 @@ const About = () => {
       </form>
       <div className={style.line}></div>
       <div className={style.titleContainer}>
-        <h1 className={style.title}>Contacto</h1>
+        <h1 className={style.title}>CONTACTO</h1>
       </div>
     </div>
   );

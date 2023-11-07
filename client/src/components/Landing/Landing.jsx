@@ -1,13 +1,10 @@
 import style from "./Landing.module.css";
 import Carousel from "../Carousel/Carousel";
-import logo from "../../assets/images/logo.png";
 
 const Landing = () => {
   return (
     <div className={style.body}>
-      <h1 className={style.title}>
-        StyleHard <img alt="logo" src={logo} />
-      </h1>
+      <h1 className={style.title}>StyleHard</h1>
       <Carousel />
     </div>
   );
