@@ -37,7 +37,7 @@ export const filter = (judgment) => {
 export const searchProduct = (search) => {
   if (search) {
     const filtrados = productos.filter((producto) =>
-      producto.tipo.startsWith(search.replace(/^\w/, (c) => c.toUpperCase()))
+      producto.marca.toUpperCase().startsWith(search.toUpperCase())
     );
     return function (dispatch) {
       dispatch({ type: SEARCH, payload: filtrados });
