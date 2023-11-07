@@ -20,8 +20,8 @@ const Detail = () => {
   return (
     <div className={style.body}>
       <h1 className={style.title}>
-        <img src={logo} />
         StyleHard
+        <img src={logo} />
       </h1>
       <hr className={style.separador} />
       {productDetail.tipo ? (
