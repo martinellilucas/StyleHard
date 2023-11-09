@@ -2,10 +2,10 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import style from "./Login.module.css";
 const Login = () => {
-  const { loginWithRedirect, isAuthenticated } = useAuth0();
+  const { user, loginWithRedirect, isAuthenticated } = useAuth0();
   return (
     <>
-      {!isAuthenticated && (
+      {!isAuthenticated ? (
         <button
           className={style.button}
           onClick={() => {
@@ -14,6 +14,10 @@ const Login = () => {
         >
           Login
         </button>
+      ) : (
+        <div>
+          <h4>{user?.mail}</h4>
+        </div>
       )}
     </>
   );
