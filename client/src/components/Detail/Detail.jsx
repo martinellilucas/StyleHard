@@ -10,13 +10,9 @@ const Detail = () => {
   const { productDetail } = useSelector((state) => state);
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { isAutenticated, loginWithRedirect } = useAuth0();
+
   const handleClick = () => {
-    if (isAutenticated) {
-      alert("Producto agregado al carrito");
-    } else {
-      loginWithRedirect();
-    }
+    alert("Producto agregado al carrito");
   };
   useEffect(() => {
     dispatch(addDetail(id));
