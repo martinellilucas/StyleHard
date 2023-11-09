@@ -3,6 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import style from "./Login.module.css";
 const Login = () => {
   const { user, loginWithRedirect, isAuthenticated } = useAuth0();
+
   return (
     <>
       {!isAuthenticated ? (
@@ -16,7 +17,7 @@ const Login = () => {
         </button>
       ) : (
         <div>
-          <h4 className={style.user}>{user?.mail}</h4>
+          <h4 className={style.user}>{user?.email}</h4>
         </div>
       )}
     </>

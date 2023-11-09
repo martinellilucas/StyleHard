@@ -1,6 +1,7 @@
 import style from "./Landing.module.css";
 import Carousel from "../Carousel/Carousel";
 import Login from "../Login/Login";
+import { useEffect } from "react";
 
 const Landing = () => {
   return (
