@@ -16,7 +16,7 @@ const Login = () => {
         </button>
       ) : (
         <div>
-          <h4>{user?.mail}</h4>
+          <h4 className={style.user}>{user?.mail}</h4>
         </div>
       )}
     </>

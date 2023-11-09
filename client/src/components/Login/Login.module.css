@@ -7,3 +7,9 @@
   top: 15%;
   right: 15%;
 }
+
+.user {
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  text-transform: uppercase;
+}
