@@ -3,7 +3,6 @@ import style from "./Detail.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addDetail, cleanDetail } from "../../redux/actions";
-import logo from "../../assets/images/logo.png";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Detail = () => {
@@ -25,10 +24,7 @@ const Detail = () => {
 
   return (
     <div className={style.body}>
-      <h1 className={style.title}>
-        StyleHard
-        <img alt="logo" src={logo} />
-      </h1>
+      <h1 className={style.title}>StyleHard</h1>
       <hr className={style.separador} />
       {productDetail.tipo ? (
         <div className={style.detail}>
