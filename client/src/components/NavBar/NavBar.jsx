@@ -3,17 +3,16 @@ import style from "./NavBar.module.css";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const NavBar = () => {
-  const { isAuthenticated } = useAuth0();
   return (
     <div className={style.container}>
       <Link className={style.span} to="/">
         <span>Inicio</span>
       </Link>
-      {isAuthenticated && (
-        <Link className={style.span} to="/productos">
-          <span>Productos</span>
-        </Link>
-      )}
+
+      <Link className={style.span} to="/productos">
+        <span>Productos</span>
+      </Link>
+
       <Link className={style.span} to="/about">
         <span>Contacto</span>
       </Link>
