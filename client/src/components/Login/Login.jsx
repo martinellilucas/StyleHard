@@ -17,10 +17,10 @@ const Login = () => {
         </button>
       ) : (
         <div>
-          <div className={style.container}>
-            <FaUserCheck color="white" />
-            <h4 className={style.user}>{user?.email}</h4>
-          </div>
+          <h4 className={style.user}>
+            <FaUserCheck color="white" /> {user?.email}
+          </h4>
+
           <button className={style.button} onClick={() => logout()}>
             Logout
           </button>
