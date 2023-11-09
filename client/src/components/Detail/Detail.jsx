@@ -10,9 +10,11 @@ const Detail = () => {
   const { productDetail } = useSelector((state) => state);
   const { id } = useParams();
   const dispatch = useDispatch();
+  const { isAuthenticated, loginWithPopup } = useAuth0();
 
   const handleClick = () => {
-    alert("Producto agregado al carrito");
+    if (isAuthenticated) alert("Producto agregado al carrito");
+    else loginWithPopup();
   };
   useEffect(() => {
     dispatch(addDetail(id));
