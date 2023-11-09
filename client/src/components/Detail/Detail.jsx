@@ -4,12 +4,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addDetail, cleanDetail } from "../../redux/actions";
 import logo from "../../assets/images/logo.png";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Detail = () => {
   const { productDetail } = useSelector((state) => state);
   const { id } = useParams();
   const dispatch = useDispatch();
-
+  const { isAutenticated, loginWithRedirect } = useAuth0();
+  const handleClick = () => {
+    if (isAutenticated) {
+      alert("Producto agregado al carrito");
+    } else {
+      loginWithRedirect();
+    }
+  };
   useEffect(() => {
     dispatch(addDetail(id));
     return () => {
@@ -38,7 +46,9 @@ const Detail = () => {
             <hr />
             <p>Precio: ${productDetail.precio}</p>
             <hr />
-            <button className={style.button}>SUMAR AL CARRITO</button>
+            <button className={style.button} onClick={handleClick}>
+              SUMAR AL CARRITO
+            </button>
           </div>
         </div>
       ) : (
