@@ -16,7 +16,7 @@ const Login = () => {
           Login
         </button>
       ) : (
-        <div>
+        <div className={style.container}>
           <h4 className={style.user}>
             <FaUserCheck color="white" />
             {user?.email}
