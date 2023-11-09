@@ -18,7 +18,7 @@ const Login = () => {
       ) : (
         <div>
           <h4 className={style.user}>
-            <FaUserCheck color="white" /> {user?.email}
+            <FaUserCheck color="white" /> {user?.name}
           </h4>
 
           <button className={style.button} onClick={() => logout()}>
