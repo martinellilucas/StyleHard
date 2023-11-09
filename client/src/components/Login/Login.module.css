@@ -1,0 +1,9 @@
+.button {
+  border-radius: 5px;
+  padding: 5px 35px;
+  font-family: "Titillium Web", sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  top: 14%;
+  right: 15%;
+}
