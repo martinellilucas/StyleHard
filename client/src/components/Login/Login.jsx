@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import style from "./Login.module.css";
+import { FaUserCheck } from "react-icons/fa";
 const Login = () => {
   const { user, loginWithRedirect, isAuthenticated } = useAuth0();
   return (
@@ -16,7 +17,10 @@ const Login = () => {
         </button>
       ) : (
         <div>
-          <h4 className={style.user}>{user?.email}</h4>
+          <h4 className={style.user}>
+            <FaUserCheck />
+            {user?.email}
+          </h4>
         </div>
       )}
     </>
