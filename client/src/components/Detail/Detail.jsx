@@ -16,11 +16,13 @@ const Detail = () => {
   const { agregarAlCarrito, isInCart } = useContext(CartContext);
 
   const handleClick = () => {
-    if (cantidad === 0) return;
-    if (!isInCart(id)) {
-      const addItem = { ...productDetail, cantidad: cantidad };
-      agregarAlCarrito(addItem);
-    }
+    if (isAuthenticated) {
+      if (cantidad === 0) return;
+      if (!isInCart(id)) {
+        const addItem = { ...productDetail, cantidad: cantidad };
+        agregarAlCarrito(addItem);
+      }
+    } else loginWithPopup();
   };
   useEffect(() => {
     dispatch(addDetail(id));

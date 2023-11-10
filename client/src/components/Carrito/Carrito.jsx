@@ -8,6 +8,7 @@ const Carrito = () => {
   const { cart, totalCart, vaciarCart, eliminarItem } = useContext(CartContext);
   const handleFinalizar = () => {
     alert("Compra realizada con exito");
+    vaciarCart();
   };
   if (cart.length === 0) {
     return (
