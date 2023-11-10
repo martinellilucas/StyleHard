@@ -56,7 +56,7 @@ const Carrito = () => {
         <button className={style.button} onClick={handleFinalizar}>
           FINALIZAR COMPRA
         </button>
-        <h2 className={style.title}>TOTAL ${totalCart()}</h2>
+        <h2 className={style.title2}>TOTAL ${totalCart()}</h2>
       </div>
     </div>
   );
