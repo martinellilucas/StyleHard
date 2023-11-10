@@ -6,35 +6,40 @@ import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import { useState } from "react";
 import { Auth0Provider } from "@auth0/auth0-react";
+import Carrito from "./components/Carrito/Carrito";
+import { CartProvider } from "./components/Carrito/CartContext";
 
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
   return (
-    <Auth0Provider
-      domain="dev-7nbk3insf1dr67c3.us.auth0.com"
-      clientId="DB6UyJGmIEzDpChRpnKg84YqxB57mxd0"
-      authorizationParams={{
-        redirect_uri: window.location.origin,
-      }}
-    >
-      <div>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route
-            path="/productos"
-            element={
-              <Productos
-                currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-              />
-            }
-          />
-          <Route path="/about" element={<About />} />
-          <Route path="/detail/:id" element={<Detail />} />
-        </Routes>
-      </div>
-    </Auth0Provider>
+    <CartProvider>
+      <Auth0Provider
+        domain="dev-7nbk3insf1dr67c3.us.auth0.com"
+        clientId="DB6UyJGmIEzDpChRpnKg84YqxB57mxd0"
+        authorizationParams={{
+          redirect_uri: window.location.origin,
+        }}
+      >
+        <div>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route
+              path="/productos"
+              element={
+                <Productos
+                  currentPage={currentPage}
+                  setCurrentPage={setCurrentPage}
+                />
+              }
+            />
+            <Route path="/about" element={<About />} />
+            <Route path="/detail/:id" element={<Detail />} />
+            <Route path="/cart" element={<Carrito />} />
+          </Routes>
+        </div>
+      </Auth0Provider>
+    </CartProvider>
   );
 }
 

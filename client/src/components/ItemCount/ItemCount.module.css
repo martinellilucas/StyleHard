@@ -1,0 +1,24 @@
+.button {
+  padding: 5px 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0px;
+  border-radius: 4px;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.span {
+  font-size: 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

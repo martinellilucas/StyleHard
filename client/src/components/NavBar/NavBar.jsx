@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "./NavBar.module.css";
-import { useAuth0 } from "@auth0/auth0-react";
+import { FaCartShopping } from "react-icons/fa6";
 
 const NavBar = () => {
   return (
@@ -15,6 +15,9 @@ const NavBar = () => {
 
       <Link className={style.span} to="/about">
         <span>Contacto</span>
+      </Link>
+      <Link className={style.span} to="/cart">
+        <FaCartShopping />
       </Link>
     </div>
   );

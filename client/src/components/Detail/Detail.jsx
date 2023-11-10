@@ -1,19 +1,26 @@
-import { useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import style from "./Detail.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { addDetail, cleanDetail } from "../../redux/actions";
 import { useAuth0 } from "@auth0/auth0-react";
+import { CartContext } from "../Carrito/CartContext";
+import { ItemCount } from "../ItemCount/ItemCount";
 
 const Detail = () => {
   const { productDetail } = useSelector((state) => state);
   const { id } = useParams();
   const dispatch = useDispatch();
   const { isAuthenticated, loginWithPopup } = useAuth0();
+  const [cantidad, setCantidad] = useState(0);
+  const { agregarAlCarrito, isInCart } = useContext(CartContext);
 
   const handleClick = () => {
-    if (isAuthenticated) alert("Producto agregado al carrito");
-    else loginWithPopup();
+    if (cantidad === 0) return;
+    if (!isInCart(id)) {
+      const addItem = { ...productDetail, cantidad: cantidad };
+      agregarAlCarrito(addItem);
+    }
   };
   useEffect(() => {
     dispatch(addDetail(id));
@@ -40,9 +47,22 @@ const Detail = () => {
             <hr />
             <p>Precio: ${productDetail.precio}</p>
             <hr />
-            <button className={style.button} onClick={handleClick}>
-              SUMAR AL CARRITO
-            </button>
+            {isInCart(id) ? (
+              <Link to="/cart">
+                <button className={style.button}>Terminar compra</button>
+              </Link>
+            ) : (
+              <div className={style.container}>
+                <ItemCount
+                  max={productDetail.stock}
+                  counter={cantidad}
+                  setCounter={setCantidad}
+                />
+                <button className={style.button} onClick={handleClick}>
+                  SUMAR AL CARRITO
+                </button>
+              </div>
+            )}
           </div>
         </div>
       ) : (
