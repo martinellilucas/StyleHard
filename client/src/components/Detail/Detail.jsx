@@ -51,11 +51,11 @@ const Detail = () => {
             <hr />
             {isInCart(id) ? (
               <div className={style.container}>
+                <Link to="/cart">
+                  <button className={style.button}>TERMINAR COMPRA</button>
+                </Link>
                 <Link to="/productos">
                   <button className={style.button}>VER MAS</button>
-                </Link>
-                <Link to="/cart">
-                  <button className={style.button}>Terminar compra</button>
                 </Link>
               </div>
             ) : (
