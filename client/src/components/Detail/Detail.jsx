@@ -50,9 +50,14 @@ const Detail = () => {
             <p>Precio: ${productDetail.precio}</p>
             <hr />
             {isInCart(id) ? (
-              <Link to="/cart">
-                <button className={style.button}>Terminar compra</button>
-              </Link>
+              <div className={style.container}>
+                <Link to="/productos">
+                  <button className={style.button}>VER MAS</button>
+                </Link>
+                <Link to="/cart">
+                  <button className={style.button}>Terminar compra</button>
+                </Link>
+              </div>
             ) : (
               <div className={style.container}>
                 <ItemCount
