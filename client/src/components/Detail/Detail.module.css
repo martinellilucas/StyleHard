@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  font-family: "Titillium Web", sans-serif;
 }
 .button {
   padding: 5px 50px;
